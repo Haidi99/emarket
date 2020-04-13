@@ -1,0 +1,46 @@
+﻿@model IEnumerable<IAtaskTest.Models.category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a href="@Url.Action("Create", "categories")" class="btn btn-primary" target="_blank">
+        <span class="glyphicon glyphicon-plus" ></span>
+        New Category
+    </a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nun_of_products)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nun_of_products)
+        </td>
+        <td>
+            
+            <a href="@Url.Action("Edit", "categories", new { id = item.CID})" class="btn btn-success">
+                <span class="glyphicon glyphicon-ok"></span>
+                Edit
+            </a>
+            |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
