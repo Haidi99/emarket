@@ -11,6 +11,7 @@ namespace IAtaskTest.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class product
@@ -24,6 +25,7 @@ namespace IAtaskTest.Models
         public string Image { get; set; }
         [Column("description")]
         public string Description { get; set; }
+        //[DisplayName("Category Name")]
         public Nullable<int> CID { get; set; }
     
         public virtual category category { get; set; }
