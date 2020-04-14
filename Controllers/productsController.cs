@@ -169,7 +169,7 @@ namespace IAtaskTest.Controllers
             product product = db.products.Find(id);
             db.products.Remove(product);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("HomePage");
         }
 
         protected override void Dispose(bool disposing)

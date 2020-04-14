@@ -60,3 +60,4 @@ F:\asp\projs\IAtaskTest\bin\PagedList.dll
 F:\asp\projs\IAtaskTest\bin\PagedList.Mvc.dll
 F:\asp\projs\IAtaskTest\bin\PagedList.xml
 F:\asp\projs\IAtaskTest\bin\PagedList.Mvc.xml
+F:\asp\projs\IAtaskTest\obj\Debug\IAtaskTest.csprojAssemblyReference.cache
