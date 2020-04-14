@@ -11,13 +11,18 @@ namespace IAtaskTest.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class product
     {
+        [Column("id")]
         public int Id { get; set; }
+        [Column("name")]
         public string Name { get; set; }
         public Nullable<int> Price { get; set; }
+        [Column("image")]
         public string Image { get; set; }
+        [Column("description")]
         public string Description { get; set; }
         public Nullable<int> CID { get; set; }
     

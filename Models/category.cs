@@ -12,6 +12,7 @@ namespace IAtaskTest.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class category
     {
@@ -20,11 +21,14 @@ namespace IAtaskTest.Models
         {
             this.products = new HashSet<product>();
         }
-    
+
+        [Column("id")]
         public int CID { get; set; }
         [DisplayName("Category Name")]
+        [Column("name")]
         public string CName { get; set; }
         [DisplayName("Number of products")]
+        [Column("number_of_products")]
         public Nullable<int> Nun_of_products { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

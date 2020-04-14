@@ -95,8 +95,11 @@ namespace IAtaskTest.Controllers
                 }
                 product.Image = path;
                 db.products.Add(product);
+                var categoryindb = db.categories.Single(c => c.CID == product.CID);
+                categoryindb.Nun_of_products++;
                 db.SaveChanges();
                 return RedirectToAction("HomePage");
+                
             }
 
             ViewBag.CID = new SelectList(db.categories, "CID", "CName", product.CID);
